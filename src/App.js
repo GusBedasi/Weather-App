@@ -15,7 +15,7 @@ function App() {
 
   const [fullWeatherInfo, setFullWeatherInfo] = useState({cityName: '', temperature: '', description: '', max: '', min: ''})
 
-  const apiKey = '51cd2bf414388469853b02b79ee72d04'
+  const apiKey = 'null'
 
   // Input handler function
   const inputHandler = (input) => {    
