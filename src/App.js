@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios'
 
 import WeatherCard from './components/WeatherCard/WeatherCard';
@@ -12,6 +12,8 @@ function App() {
   const [ searchTerm, setSearchTerm ] = useState('')
   const [ city, setCity ] = useState('')
   const [ active, setActive ] = useState(false)
+
+  const inputRef = useRef()
 
   const [fullWeatherInfo, setFullWeatherInfo] = useState({weather: '', cityName: '', temperature: '', description: '', max: '', min: ''})
 
@@ -27,6 +29,9 @@ function App() {
     event.preventDefault()
     setCity(searchTerm.toUpperCase())
     setActive(true)
+    setSearchTerm('')
+    inputRef.current.focus()
+
   }
 
   const fahrenheitConversor = (temp) => {
@@ -56,7 +61,7 @@ function App() {
     <div className="App">
       <div className="search-block">
         <label>Digite o nome da cidade</label>
-        <input type="text" id="city" required placeholder="Nome da cidade" autoComplete="off" onChange={inputHandler}></input>
+        <input ref={inputRef} type="text" id="city" required value={searchTerm} placeholder="Nome da cidade" autoComplete="off" onChange={inputHandler}></input>
         <button type="submit" onClick={submitHandler}>Search</button>
       </div>
       <div className={ active ? 'weather-block' : 'display-none' }>
