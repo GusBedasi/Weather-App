@@ -1,0 +1,34 @@
+.weather-block {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #c3c3c3;
+    border-radius: 0.8rem;
+    padding: 10px;
+}
+
+.card h1, h2, h3, h4 {
+    text-align: left;
+}
+
+.card h1, h3, h4 {
+    text-indent: 0.5rem;
+}
+
+.card h3 {
+    margin-top: 9rem;
+}
+
+.card p {
+    text-indent: 0.5rem;
+}
