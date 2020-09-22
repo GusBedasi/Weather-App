@@ -1,5 +1,27 @@
 ## Projeto finalizado
 
+## Usage
+
+Após ter baixado o repositório do github com o comando git clone, basta instalar as dependências com o comando abaixo:
+
+``` node
+npm install
+```
+Ou
+``` node
+yarn install
+```
+
+E basta iniciar o projeto com o comando:
+
+``` node
+npm start
+```
+Ou
+``` node
+yarn start
+```
+
 ![Alt text](https://media.giphy.com/media/pG45Bf192oXbVqgLnK/giphy.gif)
 
 # Weather App
